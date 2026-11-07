@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>معلومات الدول | Country Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <a class="back-link" href="../../index.html" id="backLink">→ الرجوع للرئيسية</a>
+
+        <header class="top-bar">
+            <h1 id="title">معلومات الدول</h1>
+            <div class="tools">
+                <button id="langBtn" class="ghost" type="button">EN</button>
+                <button id="themeBtn" class="ghost" type="button" aria-label="Toggle theme">🌙</button>
+            </div>
+        </header>
+
+        <form id="searchForm" class="search-box">
+            <input type="text" id="searchInput" list="countryList" autocomplete="off" />
+            <datalist id="countryList"></datalist>
+            <button type="submit" id="searchBtn"></button>
+            <button type="button" id="randomBtn" class="secondary"></button>
+        </form>
+
+        <section id="recent" class="recent" hidden></section>
+        <section id="countryInfo" aria-live="polite"></section>
+
+        <footer class="credits" id="credits"></footer>
+    </main>
+
+    <!-- بيانات الدول (محفوظة داخل المشروع، لا تحتاج إنترنت أو مفتاح API) -->
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
